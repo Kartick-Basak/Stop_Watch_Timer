@@ -1,0 +1,133 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:#13315C;
+}
+h1{
+    font-size: 50px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.stopwatch-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #426995;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.display{
+    font-size: 2rem;
+    color: #f6fbf6;
+    background-color: #12a0dd;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 5px 20px;
+}
+.display span{
+    width: 40px;
+    display: inline-block;
+    text-align: center;
+}
+button{
+    font-size: 20px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover{
+    background-color: #c4d650;
+}
+button:active{
+    background-color: #34352f;
+}
+
+button:disabled{
+    background-color: #20c939;
+    cursor: not-allowed;
+}
+.controls{
+    display: flex;
+    gap: 10px;
+}
+.first-btn button,.second-btn button{
+    margin: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .stopwatch-container{
+        width: 80%;
+    }
+    h1{
+        font-size: 40px;
+    }
+    .display{
+        font-size: 30px;
+    }
+    .display span{
+        width: 30px;
+    }
+    button{
+        font-size: 18px;
+        padding: 8px 16px;
+    }
+    .controls{
+        flex-direction: column;
+        gap: 10px;
+    } 
+    .first-btn{
+        padding-left: 80px;
+    }
+}
+@media screen and (max-width: 550px) {
+    .stopwatch-container{
+        width: 90%;
+    }
+    h1{
+        font-size: 30px;
+    }
+    .display{
+        font-size: 25px;
+    }
+    button{
+        font-size: 15px;
+        padding: 5px 10px;
+    }
+    .controls{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .first-btn{
+        padding-left: 20%;
+    }
+    
+}
+@media screen and (max-width: 400px) {
+    .stopwatch-container{
+        width: 95%;
+    }
+    h1{
+        font-size: 25px;
+    }
+    .display{
+        font-size: 20px;
+    }
+    button{
+        font-size: 12px;
+        padding: 5px 10px;
+    }   
+}
